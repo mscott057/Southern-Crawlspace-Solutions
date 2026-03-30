@@ -3,171 +3,153 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Southern Crawlspace Solutions | Pinehurst NC</title>
 
 <meta name="description" content="Crawlspace repair, encapsulation, mold removal in Pinehurst & Southern Pines NC. Free estimates. Call 336-894-8234">
 
 </head>
 
-<body style="margin:0;font-family:Arial,sans-serif;background:#fff;">
+<body style="margin:0;font-family:Arial;background:#fff;color:#111;">
 
 <!-- HEADER -->
-<header style="display:flex;justify-content:space-between;align-items:center;padding:12px 18px;background:#0f172a;color:white;position:sticky;top:0;z-index:1000;">
+<header style="display:flex;justify-content:space-between;align-items:center;padding:12px;background:#0f172a;color:white;position:sticky;top:0;z-index:1000;">
   
-  <div style="display:flex;align-items:center;gap:10px;">
-    <img src="Logo.png" style="height:45px;background:white;padding:3px;border-radius:6px;">
-    <div style="font-weight:700;line-height:1.1;font-size:14px;">
-      Southern Crawlspace Solutions<br>
-      <span style="font-size:11px;color:#cbd5e1;">Pinehurst • Southern Pines</span>
-    </div>
+  <div>
+    <strong>Southern Crawlspace Solutions</strong><br>
+    <small>Pinehurst • Southern Pines</small>
   </div>
 
-  <div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end;">
-    <a href="tel:3368948234" style="background:#22c55e;color:white;padding:8px 10px;border-radius:6px;text-decoration:none;font-weight:700;font-size:12px;">
-      📞 Call
-    </a>
-
-    <a href="sms:3368948234" style="background:#3b82f6;color:white;padding:8px 10px;border-radius:6px;text-decoration:none;font-weight:700;font-size:12px;">
-      💬 Text
-    </a>
+  <div>
+    <a href="tel:3368948234" style="background:#22c55e;color:white;padding:8px 10px;text-decoration:none;border-radius:6px;">Call</a>
   </div>
+
 </header>
 
 <!-- HERO -->
-<section style="padding:70px 20px;text-align:center;color:white;background:linear-gradient(rgba(15,23,42,.85),rgba(15,23,42,.85)),url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c') center/cover;">
-  
-  <h1 style="font-size:30px;max-width:800px;margin:auto;font-weight:800;">
-    Crawlspace Repair, Encapsulation & Mold Removal in Pinehurst NC
-  </h1>
+<section style="padding:60px 20px;text-align:center;background:#0f172a;color:white;">
 
-  <p style="margin-top:10px;color:#cbd5e1;">
-    Serving Pinehurst, Southern Pines & all Moore County, NC
-  </p>
+<h1>Crawlspace Repair & Encapsulation</h1>
+<p>Pinehurst & Southern Pines NC</p>
 
-  <div style="margin-top:20px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap;">
+<!-- BUTTON TO CALCULATOR -->
+<a href="#calculator" style="display:inline-block;margin-top:15px;background:#f59e0b;color:white;padding:12px 16px;border-radius:8px;text-decoration:none;font-weight:bold;">
+🧮 Instant Quote Calculator
+</a>
 
-    <a href="tel:3368948234" style="background:#22c55e;color:white;padding:12px 16px;border-radius:8px;text-decoration:none;font-weight:700;">
-      📞 Free Inspection
-    </a>
-
-    <a href="sms:3368948234" style="background:#3b82f6;color:white;padding:12px 16px;border-radius:8px;text-decoration:none;font-weight:700;">
-      💬 Text Now
-    </a>
-
-    <a href="#quote" style="background:#f59e0b;color:white;padding:12px 16px;border-radius:8px;text-decoration:none;font-weight:700;">
-      📝 Get Quote
-    </a>
-
-  </div>
 </section>
 
 <!-- SERVICES -->
 <section style="padding:40px 20px;text-align:center;">
-  <h2>Our Services</h2>
-
-  <div style="display:flex;flex-wrap:wrap;gap:15px;justify-content:center;margin-top:20px;">
-
-    <div style="width:240px;padding:15px;border:1px solid #ddd;border-radius:10px;">Crawlspace Repair</div>
-    <div style="width:240px;padding:15px;border:1px solid #ddd;border-radius:10px;">Encapsulation</div>
-    <div style="width:240px;padding:15px;border:1px solid #ddd;border-radius:10px;">Mold Removal</div>
-    <div style="width:240px;padding:15px;border:1px solid #ddd;border-radius:10px;">Moisture Control</div>
-
-  </div>
+<h2>Services</h2>
+<p>Crawlspace Repair • Encapsulation • Mold Removal • Moisture Control</p>
 </section>
 
-<!-- TRUST -->
-<section style="padding:40px 20px;text-align:center;background:#f9fafb;">
-  <h2>Why Homeowners Choose Us</h2>
+<!-- CALCULATOR SECTION (FIXED + VISIBLE) -->
+<section id="calculator" style="padding:40px 20px;background:#111827;color:white;text-align:center;">
 
-  <div style="display:flex;flex-wrap:wrap;gap:15px;justify-content:center;margin-top:20px;">
+<h2>Instant Crawlspace Estimate</h2>
+<p style="color:#cbd5e1;">Get a rough price in seconds</p>
 
-    <div style="width:240px;padding:15px;background:white;border-radius:10px;">⭐ Local Moore County Contractor</div>
-    <div style="width:240px;padding:15px;background:white;border-radius:10px;">💨 Moisture & Mold Experts</div>
-    <div style="width:240px;padding:15px;background:white;border-radius:10px;">📞 Fast Response Times</div>
+<div style="max-width:500px;margin:auto;text-align:left;background:#0f172a;padding:20px;border-radius:12px;">
 
-  </div>
+<label>Square Feet</label>
+<input id="size" type="number" placeholder="Example: 1200"
+style="width:100%;padding:10px;margin:8px 0;">
+
+<label>Problem Level</label>
+<select id="problem" style="width:100%;padding:10px;margin:8px 0;">
+  <option value="1">Moisture Only</option>
+  <option value="2">Mold Present</option>
+  <option value="3">Structural Damage</option>
+</select>
+
+<label>Service Type</label>
+<select id="service" style="width:100%;padding:10px;margin:8px 0;">
+  <option value="1">Basic Repair</option>
+  <option value="2">Encapsulation</option>
+  <option value="3">Full System</option>
+</select>
+
+<button onclick="calculateEstimate()"
+style="width:100%;padding:12px;background:#22c55e;color:black;font-weight:700;border:none;border-radius:8px;">
+Get Estimate
+</button>
+
+<div id="estimateResult"
+style="margin-top:15px;display:none;background:#111827;padding:15px;border-radius:10px;">
+</div>
+
+</div>
 </section>
 
-<!-- REVIEWS -->
+<!-- LEAD FORM -->
 <section style="padding:40px 20px;text-align:center;">
-  <h2>Customer Reviews</h2>
+<h2>Request Free Estimate</h2>
 
-  <div style="display:flex;flex-wrap:wrap;gap:15px;justify-content:center;margin-top:20px;">
+<form action="https://formspree.io/f/xnjodvpz" method="POST"
+style="max-width:400px;margin:auto;display:flex;flex-direction:column;gap:10px;">
 
-    <div style="width:250px;border:1px solid #eee;padding:15px;border-radius:10px;">
-      ⭐⭐⭐⭐⭐<br>
-      “Great work and fast service.”<br>
-      <small>- John M.</small>
-    </div>
+<input name="name" placeholder="Name" required style="padding:10px;">
+<input name="phone" placeholder="Phone" required style="padding:10px;">
+<textarea name="message" placeholder="What do you need?" style="padding:10px;"></textarea>
 
-    <div style="width:250px;border:1px solid #eee;padding:15px;border-radius:10px;">
-      ⭐⭐⭐⭐⭐<br>
-      “Fixed our crawlspace issue quickly.”<br>
-      <small>- Sarah T.</small>
-    </div>
+<button type="submit" style="background:#22c55e;color:white;padding:12px;border:none;">
+Send Request
+</button>
 
-    <div style="width:250px;border:1px solid #eee;padding:15px;border-radius:10px;">
-      ⭐⭐⭐⭐⭐<br>
-      “Very professional and honest pricing.”<br>
-      <small>- Mike R.</small>
-    </div>
-
-  </div>
-</section>
-
-<!-- BEFORE / AFTER -->
-<section style="padding:40px 20px;background:#f3f4f6;text-align:center;">
-  <h2>Before & After Work</h2>
-  <p>Add your job photos here later for higher conversions.</p>
-</section>
-
-<!-- SEO + MAP -->
-<section style="padding:40px 20px;text-align:center;">
-  
-  <h2>Serving Pinehurst & Southern Pines NC</h2>
-
-  <p style="max-width:700px;margin:auto;">
-    We provide crawlspace repair, encapsulation, mold removal, and moisture control services across Pinehurst, Southern Pines, Aberdeen, and all of Moore County, North Carolina.
-  </p>
-
-  <div style="max-width:900px;margin:25px auto;">
-    <iframe
-      src="https://www.google.com/maps?q=Pinehurst+NC&output=embed"
-      width="100%"
-      height="280"
-      style="border:0;border-radius:10px;">
-    </iframe>
-  </div>
-
-</section>
-
-<!-- QUOTE FORM -->
-<section id="quote" style="padding:40px 20px;background:#0f172a;color:white;text-align:center;">
-  <h2>Request Free Estimate</h2>
-
-  <form action="https://formspree.io/f/xnjodvpz" method="POST" style="max-width:400px;margin:auto;display:flex;flex-direction:column;gap:10px;margin-top:20px;">
-
-    <input name="name" placeholder="Name" required style="padding:10px;">
-    <input name="phone" placeholder="Phone" required style="padding:10px;">
-    <textarea name="message" placeholder="What do you need help with?" style="padding:10px;"></textarea>
-
-    <button type="submit" style="background:#22c55e;color:white;padding:12px;font-weight:700;border:none;">
-      Send Request
-    </button>
-
-  </form>
+</form>
 </section>
 
 <!-- FOOTER -->
 <footer style="padding:20px;text-align:center;background:#0f172a;color:white;">
-  © 2026 Southern Crawlspace Solutions
+© 2026 Southern Crawlspace Solutions
 </footer>
 
-<!-- FLOATING CALL BUTTON -->
+<!-- FLOAT CALL BUTTON -->
 <a href="tel:3368948234"
-style="position:fixed;bottom:20px;right:20px;background:#22c55e;color:white;padding:15px 18px;border-radius:50px;font-weight:700;text-decoration:none;box-shadow:0 5px 15px rgba(0,0,0,0.2);z-index:9999;">
+style="position:fixed;bottom:20px;right:20px;background:#22c55e;color:white;padding:15px;border-radius:50px;text-decoration:none;font-weight:bold;">
 📞 Call Now
 </a>
+
+<!-- CALCULATOR SCRIPT (FIXED) -->
+<script>
+function calculateEstimate(){
+
+let size = Number(document.getElementById('size').value);
+let problem = Number(document.getElementById('problem').value);
+let service = Number(document.getElementById('service').value);
+
+if(!size || size <= 0){
+alert("Please enter square footage");
+return;
+}
+
+let base = size * 1.6;
+
+// problem multiplier
+if(problem === 2) base *= 1.4;
+if(problem === 3) base *= 1.8;
+
+// service multiplier
+if(service === 2) base *= 2.2;
+if(service === 3) base *= 3;
+
+let low = Math.round(base * 0.75);
+let mid = Math.round(base);
+let high = Math.round(base * 1.35);
+
+let box = document.getElementById("estimateResult");
+box.style.display = "block";
+
+box.innerHTML =
+"<b>Estimated Price Range:</b><br><br>" +
+"Low: $" + low + "<br>" +
+"Typical: $" + mid + "<br>" +
+"High: $" + high + "+<br><br>" +
+"<small>Final price requires free inspection.</small>";
+}
+</script>
 
 </body>
 </html>
