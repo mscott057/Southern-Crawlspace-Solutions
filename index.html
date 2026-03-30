@@ -6,46 +6,49 @@
 <title>Southern Crawlspace Solutions</title>
 
 <style>
-
-/* FORCE RESET EVERYTHING */
-* {
+body {
     margin:0;
-    padding:0;
-    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+    background:#0b1220;
+    color:#fff;
+    font-size:18px;
 }
 
-/* BODY */
-body {
-    font-family: Arial, sans-serif;
-    background:#0b1220 !important;
-    color:#fff !important;
-    font-size:18px !important;
+/* TOP FIXED BANNER */
+.topbar {
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background:#22c55e;
+    color:#000;
+    text-align:center;
+    padding:14px;
+    font-weight:bold;
+    font-size:18px;
+    z-index:9999;
+}
+
+/* PUSH CONTENT DOWN (IMPORTANT) */
+.spacer {
+    height:55px;
 }
 
 /* HEADER */
 header {
-    background:#0f172a;
     text-align:center;
-    padding:30px;
+    padding:25px 15px;
+    background:#0f172a;
 }
 
 h1 {
     font-size:34px;
+    margin-bottom:5px;
 }
 
 .sub {
     color:#94a3b8;
-    margin-top:10px;
-}
-
-/* GREEN TOP BAR */
-.cta {
-    background:#22c55e;
-    color:#000;
-    text-align:center;
-    padding:15px;
-    font-weight:bold;
-    font-size:18px;
+    font-size:16px;
 }
 
 /* CONTAINER */
@@ -55,7 +58,7 @@ h1 {
     padding:20px;
 }
 
-/* BOXES */
+/* CARDS */
 .card {
     background:#111827;
     padding:20px;
@@ -63,9 +66,8 @@ h1 {
     border-radius:10px;
 }
 
-/* TEXT FIX */
 h2 {
-    font-size:26px;
+    font-size:24px;
 }
 
 /* INPUTS */
@@ -90,43 +92,42 @@ button {
     border-radius:8px;
 }
 
-/* SERVICE AREAS */
-.areas {
-    line-height:1.8;
+/* STATUS */
+#status {
+    margin-top:10px;
+    color:#22c55e;
+    font-weight:bold;
 }
 
-/* STICKY BAR */
-.sticky {
+/* STICKY CALL BAR */
+.bottom {
     position:fixed;
     bottom:0;
     left:0;
     width:100%;
-    background:#22c55e !important;
+    background:#22c55e;
     text-align:center;
     padding:16px;
-    font-size:22px;
+    font-size:20px;
     font-weight:900;
     z-index:9999;
 }
 
-/* 🚨 THIS IS THE IMPORTANT FIX */
-.sticky,
-.sticky * {
+.bottom a {
     color:#000 !important;
-    font-size:22px !important;
-    font-weight:900 !important;
-    text-decoration:none !important;
+    text-decoration:none;
 }
-
 </style>
 
 </head>
 
 <body>
 
-<div class="cta">
+<div class="topbar">
 🔥 ESTIMATES THIS WEEK • CALL 336-894-8234
 </div>
+
+<div class="spacer"></div>
 
 <header>
 <h1>Southern Crawlspace Solutions</h1>
@@ -143,24 +144,47 @@ button {
 
 <div class="card">
 <h2>Request Free Estimate</h2>
-<input placeholder="Name">
-<input placeholder="Phone">
-<textarea placeholder="What do you need?"></textarea>
-<button>Send Request</button>
+
+<input id="name" placeholder="Name">
+<input id="phone" placeholder="Phone">
+<textarea id="message" placeholder="What do you need?"></textarea>
+
+<button onclick="sendLead()">Send Request</button>
+
+<div id="status"></div>
 </div>
 
 <div class="card">
 <h2>Service Areas</h2>
-<div class="areas">
-Southern Pines • Pinehurst • Aberdeen • Greensboro • Charlotte • Raleigh • Durham • Chapel Hill • Salisbury
-</div>
-</div>
-
+<p>
+Southern Pines • Pinehurst • Aberdeen • Greensboro • Charlotte • Raleigh • Durham • Chapel Hill • Salisbury • Albemarle
+</p>
 </div>
 
-<div class="sticky">
+</div>
+
+<div class="bottom">
 📞 CALL NOW: <a href="tel:3368948234">336-894-8234</a>
 </div>
+
+<script>
+function sendLead() {
+    let name = document.getElementById("name").value;
+    let phone = document.getElementById("phone").value;
+
+    if(!name || !phone) {
+        document.getElementById("status").innerText = "⚠️ Please enter name and phone.";
+        return;
+    }
+
+    document.getElementById("status").innerText =
+    "✅ Request sent! We will contact you shortly.";
+
+    document.getElementById("name").value = "";
+    document.getElementById("phone").value = "";
+    document.getElementById("message").value = "";
+}
+</script>
 
 </body>
 </html>
