@@ -7,184 +7,151 @@
 
 <style>
 body {
-    margin:0;
-    font-family: Arial, sans-serif;
-    background:#0b1220;
-    color:#fff;
-    font-size:18px;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f5f5f5;
 }
 
-/* TOP FIXED BANNER */
-.topbar {
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    background:#22c55e;
-    color:#000;
-    text-align:center;
-    padding:14px;
-    font-weight:bold;
-    font-size:18px;
-    z-index:9999;
+/* TOP BAR */
+.top-bar {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
 }
-
-/* PUSH CONTENT DOWN (IMPORTANT) */
-.spacer {
-    height:55px;
+.top-bar a {
+  color: #00ffcc;
+  text-decoration: none;
 }
+body { margin-top: 50px; }
 
 /* HEADER */
-header {
-    text-align:center;
-    padding:25px 15px;
-    background:#0f172a;
+.header {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+}
+.header h1 {
+  margin: 0;
+  font-size: 28px;
 }
 
-h1 {
-    font-size:34px;
-    margin-bottom:5px;
+/* BUTTONS */
+.call-btn, .text-btn {
+  display: block;
+  text-align: center;
+  padding: 15px;
+  margin: 15px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+}
+.call-btn {
+  background: #00c48c;
+  color: #fff;
+}
+.text-btn {
+  background: #007bff;
+  color: #fff;
 }
 
-.sub {
-    color:#94a3b8;
-    font-size:16px;
+/* SECTION */
+.section {
+  padding: 20px;
 }
 
-/* CONTAINER */
-.container {
-    max-width:1000px;
-    margin:auto;
-    padding:20px;
+/* FORM */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
-
-/* CARDS */
-.card {
-    background:#111827;
-    padding:20px;
-    margin:15px 0;
-    border-radius:10px;
-}
-
-h2 {
-    font-size:24px;
-}
-
-/* INPUTS */
 input, textarea {
-    width:100%;
-    padding:12px;
-    margin:8px 0;
-    border:none;
-    border-radius:6px;
-    font-size:16px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
 }
-
-/* BUTTON */
 button {
-    width:100%;
-    padding:14px;
-    background:#22c55e;
-    border:none;
-    font-size:18px;
-    font-weight:bold;
-    cursor:pointer;
-    border-radius:8px;
+  background: #00c48c;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
 }
 
-/* STATUS */
-#status {
-    margin-top:10px;
-    color:#22c55e;
-    font-weight:bold;
+/* GALLERY */
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
 }
-
-/* STICKY CALL BAR */
-.bottom {
-    position:fixed;
-    bottom:0;
-    left:0;
-    width:100%;
-    background:#22c55e;
-    text-align:center;
-    padding:16px;
-    font-size:20px;
-    font-weight:900;
-    z-index:9999;
-}
-
-.bottom a {
-    color:#000 !important;
-    text-decoration:none;
+.gallery img {
+  width: 100%;
+  border-radius: 8px;
 }
 </style>
-
 </head>
 
 <body>
 
-<div class="topbar">
-🔥 ESTIMATES THIS WEEK • CALL 336-894-8234
+<!-- TOP BAR -->
+<div class="top-bar">
+🔥 ESTIMATES THIS WEEK • CALL NOW: <a href="tel:13368948234">336-894-8234</a>
 </div>
 
-<div class="spacer"></div>
-
-<header>
-<h1>Southern Crawlspace Solutions</h1>
-<div class="sub">Crawlspace Repair • Encapsulation • Mold Removal • Pressure Washing</div>
-</header>
-
-<div class="container">
-
-<div class="card">
-<h2>Free Crawlspace Inspection</h2>
-<p>We fix moisture and structural issues before they get worse.</p>
-<p><b>Call 336-894-8234</b></p>
+<!-- HEADER -->
+<div class="header">
+  <h1>Southern Crawlspace Solutions</h1>
+  <p>Crawlspace Repair • Encapsulation • Mold Removal • Pressure Washing</p>
 </div>
 
-<div class="card">
-<h2>Request Free Estimate</h2>
+<!-- BUTTONS -->
+<a href="tel:13368948234" class="call-btn">📞 CALL NOW</a>
+<a href="sms:13368948234" class="text-btn">💬 TEXT FOR FAST QUOTE</a>
 
-<input id="name" placeholder="Name">
-<input id="phone" placeholder="Phone">
-<textarea id="message" placeholder="What do you need?"></textarea>
-
-<button onclick="sendLead()">Send Request</button>
-
-<div id="status"></div>
+<!-- SERVICES -->
+<div class="section">
+  <h2>Our Services</h2>
+  <ul>
+    <li>Crawlspace Encapsulation</li>
+    <li>Mold Removal</li>
+    <li>Moisture Control</li>
+    <li>Foundation Repair</li>
+    <li>Pressure Washing</li>
+  </ul>
 </div>
 
-<div class="card">
-<h2>Service Areas</h2>
-<p>
-Southern Pines • Pinehurst • Aberdeen • Greensboro • Charlotte • Raleigh • Durham • Chapel Hill • Salisbury • Albemarle
-</p>
+<!-- FORM -->
+<div class="section">
+  <h2>Request a Free Estimate</h2>
+
+  <!-- 🔥 REPLACE LINK BELOW WITH YOUR FORMSPREE LINK -->
+  <form action="https://formspree.io/f/xxxxabcd" method="POST">
+    <input type="text" name="name" placeholder="Full Name" required>
+    <input type="tel" name="phone" placeholder="Phone Number" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <textarea name="message" placeholder="Describe your issue..." required></textarea>
+    
+    <button type="submit">Request Free Estimate</button>
+  </form>
 </div>
 
+<!-- GALLERY -->
+<div class="section">
+  <h2>Our Work</h2>
+  <div class="gallery">
+    <img src="before1.jpg" alt="Before Work">
+    <img src="after1.jpg" alt="After Work">
+  </div>
 </div>
-
-<div class="bottom">
-📞 CALL NOW: <a href="tel:3368948234">336-894-8234</a>
-</div>
-
-<script>
-function sendLead() {
-    let name = document.getElementById("name").value;
-    let phone = document.getElementById("phone").value;
-
-    if(!name || !phone) {
-        document.getElementById("status").innerText = "⚠️ Please enter name and phone.";
-        return;
-    }
-
-    document.getElementById("status").innerText =
-    "✅ Request sent! We will contact you shortly.";
-
-    document.getElementById("name").value = "";
-    document.getElementById("phone").value = "";
-    document.getElementById("message").value = "";
-}
-</script>
 
 </body>
 </html>
