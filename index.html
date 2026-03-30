@@ -15,7 +15,6 @@
 <!-- HEADER -->
 <header style="display:flex;justify-content:space-between;align-items:center;padding:12px 16px;background:#0f172a;position:sticky;top:0;z-index:1000;">
 
-  <!-- LOGO (FIXED) -->
   <div style="display:flex;align-items:center;gap:10px;">
     <img src="./Logo.png" style="height:45px;background:white;padding:3px;border-radius:6px;">
     <div style="font-size:13px;line-height:1.1;">
@@ -24,25 +23,15 @@
     </div>
   </div>
 
-  <!-- BUTTONS -->
   <div style="display:flex;gap:8px;flex-wrap:wrap;">
-
-    <a href="tel:3368948234" style="background:#22c55e;color:white;padding:8px 10px;border-radius:6px;text-decoration:none;font-weight:700;">
-      📞 Call
-    </a>
-
-    <a href="sms:3368948234" style="background:#3b82f6;color:white;padding:8px 10px;border-radius:6px;text-decoration:none;font-weight:700;">
-      💬 Text
-    </a>
-
-    <a href="#calculator" style="background:#f59e0b;color:white;padding:8px 10px;border-radius:6px;text-decoration:none;font-weight:700;">
-      🧮 Quote
-    </a>
-
+    <a href="tel:3368948234" style="background:#22c55e;color:white;padding:8px 10px;border-radius:6px;text-decoration:none;font-weight:700;">📞 Call</a>
+    <a href="sms:3368948234" style="background:#3b82f6;color:white;padding:8px 10px;border-radius:6px;text-decoration:none;font-weight:700;">💬 Text</a>
+    <a href="#calculator" style="background:#f59e0b;color:white;padding:8px 10px;border-radius:6px;text-decoration:none;font-weight:700;">🧮 Quote</a>
   </div>
+
 </header>
 
-<!-- HERO (BACKGROUND FIXED) -->
+<!-- HERO -->
 <section style="padding:80px 20px;text-align:center;
 background:linear-gradient(rgba(11,18,32,.88),rgba(11,18,32,.88)),
 url('https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;">
@@ -53,78 +42,9 @@ Crawlspace Repair & Encapsulation
 
 <p style="color:#cbd5e1;">Pinehurst • Southern Pines • Albemarle NC</p>
 
-<div style="margin-top:20px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap;">
-
-<a href="tel:3368948234" style="background:#22c55e;color:white;padding:12px 16px;border-radius:8px;text-decoration:none;font-weight:700;">
-📞 Call Now
-</a>
-
-<a href="sms:3368948234" style="background:#3b82f6;color:white;padding:12px 16px;border-radius:8px;text-decoration:none;font-weight:700;">
-💬 Text Now
-</a>
-
-<a href="#calculator" style="background:#f59e0b;color:white;padding:12px 16px;border-radius:8px;text-decoration:none;font-weight:700;">
-🧮 Free Quote
-</a>
-
-</div>
 </section>
 
-<!-- SERVICES -->
-<section style="padding:40px 20px;text-align:center;">
-<h2>Our Services</h2>
-<p>Crawlspace Repair • Encapsulation • Mold Removal • Moisture Control • Structural Repair</p>
-</section>
-
-<!-- TRUST -->
-<section style="padding:40px 20px;text-align:center;background:#111827;">
-<h2>Why Homeowners Choose Us</h2>
-
-<div style="display:flex;flex-wrap:wrap;gap:15px;justify-content:center;margin-top:15px;">
-
-<div style="width:220px;background:#0f172a;padding:15px;border-radius:10px;">⭐ Local Contractor</div>
-<div style="width:220px;background:#0f172a;padding:15px;border-radius:10px;">💨 Moisture Experts</div>
-<div style="width:220px;background:#0f172a;padding:15px;border-radius:10px;">⚡ Fast Response</div>
-
-</div>
-</section>
-
-<!-- REVIEWS -->
-<section style="padding:40px 20px;text-align:center;">
-<h2>Customer Reviews</h2>
-
-<div style="display:flex;flex-wrap:wrap;gap:15px;justify-content:center;margin-top:15px;">
-
-<div style="width:240px;border:1px solid #1f2937;padding:15px;border-radius:10px;">
-⭐⭐⭐⭐⭐<br>
-“Fast and professional service.”<br>
-<small>- John M</small>
-</div>
-
-<div style="width:240px;border:1px solid #1f2937;padding:15px;border-radius:10px;">
-⭐⭐⭐⭐⭐<br>
-“Fixed our moisture issue quickly.”<br>
-<small>- Sarah T</small>
-</div>
-
-<div style="width:240px;border:1px solid #1f2937;padding:15px;border-radius:10px;">
-⭐⭐⭐⭐⭐<br>
-“Honest pricing and great work.”<br>
-<small>- Mike R</small>
-</div>
-
-</div>
-</section>
-
-<!-- SERVICE AREAS (UPDATED) -->
-<section style="padding:40px 20px;text-align:center;background:#111827;">
-<h2>Service Areas</h2>
-<p>
-Pinehurst • Southern Pines • Aberdeen • Whispering Pines • Moore County • Albemarle NC
-</p>
-</section>
-
-<!-- QUOTE CALCULATOR -->
+<!-- CALCULATOR -->
 <section id="calculator" style="padding:40px 20px;text-align:center;background:#0f172a;">
 
 <h2>Instant Crawlspace Quote</h2>
@@ -133,12 +53,10 @@ Pinehurst • Southern Pines • Aberdeen • Whispering Pines • Moore County 
 <div style="max-width:500px;margin:auto;background:#111827;padding:20px;border-radius:12px;text-align:left;">
 
 <label>Phone Number (Required)</label>
-<input id="phone" type="tel" placeholder="336-000-0000"
-style="width:100%;padding:10px;margin:8px 0;">
+<input id="phone" type="tel" style="width:100%;padding:10px;margin:8px 0;">
 
 <label>Square Feet</label>
-<input id="size" type="number" placeholder="1200"
-style="width:100%;padding:10px;margin:8px 0;">
+<input id="size" type="number" style="width:100%;padding:10px;margin:8px 0;">
 
 <label>Problem Level</label>
 <select id="problem" style="width:100%;padding:10px;margin:8px 0;">
@@ -165,17 +83,6 @@ style="margin-top:15px;display:none;background:#0b1220;padding:15px;border-radiu
 
 </div>
 </section>
-
-<!-- FOOTER -->
-<footer style="padding:20px;text-align:center;background:#0f172a;">
-© 2026 Southern Crawlspace Solutions
-</footer>
-
-<!-- FLOAT BUTTON -->
-<a href="tel:3368948234"
-style="position:fixed;bottom:20px;right:20px;background:#22c55e;color:white;padding:15px;border-radius:50px;text-decoration:none;font-weight:700;">
-📞 Call
-</a>
 
 <script>
 function calculateEstimate(){
@@ -207,15 +114,26 @@ let low = Math.round(base * 0.75);
 let mid = Math.round(base);
 let high = Math.round(base * 1.35);
 
-let box = document.getElementById("estimateResult");
-box.style.display = "block";
+let estimateText =
+"Low: $" + low + " | Mid: $" + mid + " | High: $" + high;
 
-box.innerHTML =
-"<b>Your Estimate:</b><br><br>" +
-"Low: $" + low + "<br>" +
-"Typical: $" + mid + "<br>" +
-"High: $" + high + "+<br><br>" +
-"<small>We will contact you at " + phone + "</small>";
+document.getElementById("estimateResult").style.display = "block";
+document.getElementById("estimateResult").innerHTML =
+"<b>Your Estimate:</b><br><br>" + estimateText;
+
+/* ✅ SEND EMAIL LEAD (FIXED FORMSPREE) */
+fetch("https://formspree.io/f/xnjodvpz", {
+method: "POST",
+headers: { "Content-Type": "application/json" },
+body: JSON.stringify({
+phone: phone,
+square_feet: size,
+problem: problem,
+service: service,
+estimate: estimateText
+})
+});
+
 }
 </script>
 
