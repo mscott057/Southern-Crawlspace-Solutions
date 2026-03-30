@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Instant Crawlspace Estimate | Southern Crawlspace Solutions</title>
+<style>
+body{font-family:Arial;margin:0;background:#0b1220;color:#fff;padding:20px;}
+.container{max-width:700px;margin:auto;}
+.card{background:#111827;padding:20px;border-radius:12px;margin-top:15px;}
+h1{color:#22c55e;font-size:26px;}
+label{display:block;margin-top:10px;font-weight:bold;}
+select,input{width:100%;padding:10px;margin-top:5px;border-radius:8px;border:none;}
+button{width:100%;padding:14px;margin-top:15px;background:#22c55e;border:none;font-weight:bold;border-radius:10px;cursor:pointer;}
+.result{margin-top:15px;padding:15px;background:#0f172a;border-radius:10px;}
+.cta{display:block;margin-top:10px;text-align:center;background:#3b82f6;padding:12px;border-radius:10px;color:white;text-decoration:none;}
+.small{font-size:12px;color:#cbd5e1;}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<h1>Instant Crawlspace Estimate</h1>
+<p class="small">Get a rough price range in under 30 seconds. Final pricing requires a free inspection.</p>
+
+<div class="card">
+
+<label>Crawlspace Size (sq ft)</label>
+<input type="number" id="size" placeholder="Example: 1200">
+
+<label>Problem Type</label>
+<select id="problem">
+<option value="1">Moisture Only</option>
+<option value="2">Mold Present</option>
+<option value="3">Structural Damage</option>
+</select>
+
+<label>Service Type</label>
+<select id="service">
+<option value="1">Basic Repair</option>
+<option value="2">Encapsulation</option>
+<option value="3">Full System Repair</option>
+</select>
+
+<button onclick="calculate()">Get Estimate</button>
+
+<div class="result" id="result" style="display:none;"></div>
+
+</div>
+
+<div class="card">
+<h3>Call for Exact Pricing</h3>
+<a class="cta" href="tel:3368948234">📞 Call Now</a>
+<a class="cta" href="sms:3368948234">💬 Text Estimate Request</a>
+</div>
+
+</div>
+
+<script>
+function calculate(){
+let size = parseFloat(document.getElementById('size').value);
+let problem = parseFloat(document.getElementById('problem').value);
+let service = parseFloat(document.getElementById('service').value);
+
+if(!size || size <= 0){
+alert('Please enter a valid square footage');
+return;
+}
+
+let base = size * 1.5;
+
+// problem multiplier
+if(problem==1) base *= 1;
+if(problem==2) base *= 1.4;
+if(problem==3) base *= 1.8;
+
+// service multiplier
+if(service==1) base *= 1;
+if(service==2) base *= 2.2;
+if(service==3) base *= 3;
+
+let low = Math.round(base * 0.8);
+let mid = Math.round(base);
+let high = Math.round(base * 1.4);
+
+let result = document.getElementById('result');
+result.style.display='block';
+result.innerHTML = `
+<b>Estimated Range:</b><br><br>
+Low: $${low}<br>
+Typical: $${mid}<br>
+High: $${high}+<br><br>
+<span class='small'>Final pricing requires free inspection.</span>
+<a class='cta' href='tel:3368948234'>Call for Exact Quote</a>
+`;
+}
+</script>
+
+</body>
+</html>
