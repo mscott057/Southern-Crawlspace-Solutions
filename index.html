@@ -171,41 +171,4 @@ function calculateEstimate(){
 let phone = document.getElementById('phone').value;
 let size = Number(document.getElementById('size').value);
 let problem = Number(document.getElementById('problem').value);
-let service = Number(document.getElementById('service').value);
-
-if(!phone || phone.length < 7){
-alert("Enter phone number to unlock estimate");
-return;
-}
-
-if(!size || size <= 0){
-alert("Enter square footage");
-return;
-}
-
-let base = size * 1.6;
-
-if(problem === 2) base *= 1.4;
-if(problem === 3) base *= 1.8;
-
-if(service === 2) base *= 2.2;
-if(service === 3) base *= 3;
-
-let low = Math.round(base * 0.75);
-let mid = Math.round(base);
-let high = Math.round(base * 1.35);
-
-let box = document.getElementById("estimateResult");
-box.style.display = "block";
-
-box.innerHTML =
-"<b>Your Estimate Range:</b><br><br>" +
-"Low: $" + low + "<br>" +
-"Typical: $" + mid + "<br>" +
-"High: $" + high + "+<br><br>" +
-"<small>We will contact you at " + phone + "</small>";
-}
-</script>
-
-</body>
-</html>
+let service = 
